@@ -22,9 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="
-        1. 声明Toolbar，并设置替换ActionBar，使用Toolbar的Activity主题要设置为NoActionbar
-        2. 创建菜单文件，覆盖父类方法实现菜单功能"/>
+            android:text="@string/toolbar"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -43,15 +41,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="
-            1. DrawerLayout 作为根布局使用，子布局1作为主屏幕内容，子View2作为菜单内容\n
-            2. 子View2需要指定android:layout_gravity 属性 left，right，start(根据系统语言方向决定)" />
+            android:text="@string/drawerlayout" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="
-            toolbar有默认左侧按钮，默认图标为返回上一页箭头，需要手动启用及设置监听方法(id为固定值)" />
+            android:text="@string/toolbar2" />
 
         <ImageView
             android:layout_width="wrap_content"
