@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/menu_1">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        android:paddingLeft="10dp"
+        android:text="Title" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/function_rv"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+</LinearLayout>

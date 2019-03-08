@@ -1,0 +1,1 @@
+include ':app', ':s_base', ':b_1_four_base_component', ':s_dialog', ':s_designpatterns', ':b_materialdesign'
