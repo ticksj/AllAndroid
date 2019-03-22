@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConstraintLayoutActivity">
+
+
+    <TextView
+        android:id="@+id/t1"
+        style="@style/text_s1"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/t2"
+        style="@style/text_s1"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@id/t1" />
+
+    <TextView
+        android:id="@+id/t3"
+        style="@style/text_s1"
+        android:text="3"
+        app:layout_constraintCircle="@id/t1"
+        app:layout_constraintCircleAngle="120"
+        app:layout_constraintCircleRadius="100dp" />
+
+    <TextView
+        android:id="@+id/t4"
+        style="@style/text_s1"
+        android:text="44444444444444444444"
+        app:layout_constraintLeft_toRightOf="@id/t3"
+        app:layout_constraintTop_toBottomOf="@id/t3" />
+
+    <TextView
+        android:id="@+id/t5"
+        style="@style/text_s1"
+        android:text="5555555555555555555555555555555555"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/t6"
+        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+    <TextView
+        android:id="@+id/t6"
+        style="@style/text_s1"
+        android:text="6666666666666666666666666"
+        app:layout_constraintLeft_toRightOf="@id/t5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t4" />
+
+    <TextView
+        android:id="@+id/t7"
+        style="@style/text_s1"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="777777777777777777777777777"
+        app:layout_constraintTop_toBottomOf="@id/t5" />
+
+    <TextView
+        android:id="@+id/t8"
+        style="@style/text_s1"
+        android:text="8888"
+        app:layout_constraintBaseline_toBaselineOf="@id/t7"
+        app:layout_constraintLeft_toRightOf="@id/t7" />
+
+    <TextView
+        android:id="@+id/t9"
+        style="@style/text_s1"
+        android:gravity="center"
+        android:text="9999999999999999"
+        android:visibility="gone"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toBottomOf="@id/t7" />
+
+    <TextView
+        android:id="@+id/t10"
+        style="@style/text_s1"
+        android:layout_margin="20dp"
+        android:text="101010101010"
+        app:layout_constraintLeft_toRightOf="@id/t9"
+        app:layout_constraintTop_toBottomOf="@id/t7"
+        app:layout_goneMarginLeft="10dp" />
+
+
+    <TextView
+        android:id="@+id/t11"
+        style="@style/text_s2"
+        android:text="a11"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/t12"
+        app:layout_constraintTop_toBottomOf="@id/t10" />
+
+    <TextView
+        android:id="@+id/t12"
+        style="@style/text_s2"
+        android:text="a12"
+        app:layout_constraintLeft_toRightOf="@id/t11"
+        app:layout_constraintRight_toLeftOf="@id/t13"
+        app:layout_constraintTop_toBottomOf="@id/t10" />
+
+    <TextView
+        android:id="@+id/t13"
+        style="@style/text_s2"
+        android:text="a13"
+        app:layout_constraintLeft_toRightOf="@id/t12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t10" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7"/>
+    <TextView
+        android:id="@+id/t14"
+        style="@style/text_s2"
+        android:text="14"
+        app:layout_constraintTop_toBottomOf="@id/guide_h"
+        app:layout_constraintLeft_toRightOf="@id/guide_v"/>
+    <TextView
+        android:id="@+id/t15"
+        style="@style/text_s2"
+        android:text="15"
+        app:layout_constraintTop_toBottomOf="@id/t14"
+        app:layout_constraintLeft_toRightOf="@id/guide_v"/>
+    <TextView
+        android:id="@+id/t16"
+        style="@style/text_s3"
+        android:text="16"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:4"
+        app:layout_constraintTop_toBottomOf="@id/t11"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="t16,t13"/>
+
+    <TextView
+        android:id="@+id/t17"
+        style="@style/text_s3"
+        android:text="17"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/t13"
+        app:layout_constraintLeft_toRightOf="@id/barrier"/>
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="t15,t17" />
+    <android.support.constraint.Placeholder
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/t16"
+        app:content ="@id/t18"
+        />
+    <TextView
+        android:id="@+id/t18"
+        style="@style/text_s3"
+        android:text="18"
+        android:layout_width="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>
