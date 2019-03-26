@@ -6,9 +6,15 @@ import com.sj.s_base.BaseActivity;
 
 public class ConstraintLayoutActivity extends BaseActivity {
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_constraint_layout);
+    protected int getResid() {
+        return R.layout.activity_constraint_layout;
+    }
+
+    @Override
+    protected void init() {
+
     }
 }

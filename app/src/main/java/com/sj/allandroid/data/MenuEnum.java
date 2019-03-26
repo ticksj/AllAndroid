@@ -1,8 +1,9 @@
 package com.sj.allandroid.data;
 
 import com.sj.b_1_four_base_component.SActivity;
-import com.sj.b_materialdesign.MDView2Activity;
 import com.sj.b_materialdesign.MDView1Activity;
+import com.sj.b_materialdesign.MDView2Activity;
+import com.sj.b_view.ConstraintLayoutActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public enum MenuEnum {
     ),
 
     BaseUIComponent("基础组件",
-            new Menu.Function(null,""),
+            new Menu.Function(ConstraintLayoutActivity.class,"ConstraintLayout"),
             new Menu.Function(null,"")
     ),
     ImportantComponent("重要组件",

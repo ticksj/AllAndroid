@@ -4,16 +4,27 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.sj.allandroid"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        debug {
+            keyAlias 'key0'
+            keyPassword 'sj1995'
+            storeFile file('I:/Project/Android/AllAndroid/allandroid.jks')
+            storePassword 'sj1995'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
 }
@@ -30,4 +41,6 @@ dependencies {
     implementation project(':s_dialog')
     implementation project(':b_materialdesign')
     implementation project(':s_designpatterns')
+    implementation 'com.huawei.android.hms:push:2.6.3.301'
+    implementation project(':b_view')
 }

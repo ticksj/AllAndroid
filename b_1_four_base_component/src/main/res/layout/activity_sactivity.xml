@@ -27,4 +27,13 @@
         android:text="关键词：优先级 复用"
         android:autoLink="all"
         style="@style/common_text" />
+
+
+    <TextView
+        android:id="@+id/toself"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="启动自身"
+        />
+
 </LinearLayout>

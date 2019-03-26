@@ -3,7 +3,8 @@
     package="com.sj.b_1_four_base_component">
 
     <application>
-        <activity android:name=".SActivity"></activity>
+        <activity android:name=".SActivity"
+            android:launchMode="singleTask"></activity>
     </application>
 
 </manifest>

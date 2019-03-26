@@ -13,16 +13,21 @@ import com.sj.s_base.BaseActivity;
 public class MDView1Activity extends BaseActivity {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mdview1);
+    protected int getResid() {
+        return R.layout.activity_mdview1;
+    }
+
+    @Override
+    protected void init() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.iv_menu);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar, menu);
